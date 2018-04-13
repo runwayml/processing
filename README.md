@@ -13,7 +13,7 @@ Examples are separated by current available models.
 - [im2txt](/im2txt)
 - [OpenPose](/openpose)
 
-## Library
+## Library
 
 Ideally this will be a Processing Library that manages the OSC connection to Runway. For now all examples are using Processing [oscP5](http://www.sojamo.de/libraries/oscP5/) library.
 
