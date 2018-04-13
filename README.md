@@ -5,7 +5,7 @@
 
 # Runway + Processing
 
-A collection of stand alone examples of connecting [Runway](https://runwayml.com/) to [Processing](https://processing.org/).
+A collection of stand alone examples connecting [Runway](https://runwayml.com/) to [Processing](https://processing.org/).
 Examples are separated by current available models.
 
 ## Examples
