@@ -32,9 +32,11 @@
 // Import OSC
 import oscP5.*;
 import netP5.*;
-  
+import processing.video.*;
+
 OscP5 oscP5;
 NetAddress myRemoteLocation;
+Capture cam;
 
 // This will store detected objects coming from Runway
 ArrayList<DetectedObject> objects;
@@ -53,10 +55,30 @@ void setup() {
   
   // instantiate object list  
   objects = new ArrayList<DetectedObject>();
+
+  // Get all cameras
+  String[] cameras = Capture.list();
+  if (cameras.length == 0) {
+    println("There are no cameras available for capture.");
+    exit();
+   } else {
+    println("Available cameras:");
+    for (int i = 0; i < cameras.length; i++) {
+      println(cameras[i]);
+    }
+   }
+  // The camera can be initialized directly using an 
+  // element from the array returned by list():
+  cam = new Capture(this, camWidth, camHeight);
+  cam.start();
 }
 
 void draw() {
-  background(0);
+  if (cam.available() == true) {
+    cam.read();
+  }
+  // Draw the camera
+  image(cam, 0, 0);
 
   // Draw the captions
   for (DetectedObject o : objects) {
@@ -64,7 +86,6 @@ void draw() {
   }
   
 }
-
 
 // Helper class for storing objects
 class DetectedObject 
