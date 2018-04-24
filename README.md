@@ -12,6 +12,7 @@ Examples are separated by current available models.
 
 - [im2txt](/im2txt)
 - [OpenPose](/openpose)
+- [YOLO](/YOLO)
 
 ## Library
 
