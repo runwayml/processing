@@ -8,7 +8,7 @@ A collection of examples and tutorials on how to use [Runway](https://runwayapp.
 
 ## Examples
 
-- Skeleton tracking wiht PoseNet:
+- Skeleton tracking with PoseNet:
   - [Tutorial](https://docs.runwayapp.ai/#/tutorial_posenet)
   - [Code](/posenet)
 
