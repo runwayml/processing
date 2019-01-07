@@ -1,4 +1,4 @@
-  <img src="resources/rw-processing.jpg" width="100">
+  <img src="resources/rw-processing.jpg" width="100%">
 
 # Runway + Processing
 
