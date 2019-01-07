@@ -1,13 +1,16 @@
-  <img src="resources/rw-processing.jpg" width="100%">
+<p align="center">
+  <img src="https://runway.nyc3.digitaloceanspaces.com/assets/github/cover_runway_processing_github.jpg">
+</p>
 
 # Runway + Processing
 
-A collection of stand alone examples connecting [Runway](https://runwayml.com/) to [Processing](https://processing.org/).
-Examples are separated by current available models.
+A collection of examples and tutorials on how to use [Runway](https://runwayapp.ai/) with [Processing](https://processing.org/).
 
 ## Examples
 
-- [PoseNet](/posenet)
+- Skeleton tracking wiht PoseNet:
+  - [Tutorial](https://docs.runwayapp.ai/#/tutorial_posenet)
+  - [Code](/posenet)
 
 ## Library
 
