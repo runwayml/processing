@@ -1,7 +1,4 @@
-<p align="center">
-  <img src="resources/runway_icon.png" width="95">
-  <img src="resources/processing.png" width="104">
-</p>
+  <img src="resources/rw-processing.jpg" width="100">
 
 # Runway + Processing
 
