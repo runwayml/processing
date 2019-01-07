@@ -10,10 +10,7 @@ Examples are separated by current available models.
 
 ## Examples
 
-- [im2txt](/im2txt)
-- [OpenPose](/openpose)
-- [YOLO](/YOLO)
-- [Gaze Capture](/gazeCapture)
+- [PoseNet](/posenet)
 
 ## Library
 
