@@ -164,7 +164,7 @@ void plotPoints(JSONArray feature)
 
 Now back in the draw() function we can call the plotPoints() function on each feature:
 
-```
+```java
 plotPoints( person.getJSONArray("bottom_lip"));
 plotPoints( person.getJSONArray("top_lip"));
 plotPoints( person.getJSONArray("chin"));
