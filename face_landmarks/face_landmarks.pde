@@ -1,4 +1,4 @@
-final String httpDataRoute = "http://localhost:8000/data"; // set to the Runway HTTP route
+final String httpDataRoute = "http://localhost:8001/data"; // set to the Runway HTTP route
 int w, h;
 
 void setup() {
@@ -26,19 +26,18 @@ void draw ()
   if (landmarks != null)
   {
     int num_people = landmarks.size();
-    JSONObject person[] = new JSONObject[landmarks.size()];
     for (int i = 0; i < num_people; i++)
     {
-      person[i] = landmarks.getJSONObject(i);
-      plotPoints( person[ i ].getJSONArray("bottom_lip"));
-      plotPoints( person[ i ].getJSONArray("top_lip"));
-      plotPoints( person[ i ].getJSONArray("chin"));
-      plotPoints( person[ i ].getJSONArray("left_eye"));
-      plotPoints( person[ i ].getJSONArray("left_eyebrow"));
-      plotPoints( person[ i ].getJSONArray("right_eye"));
-      plotPoints( person[ i ].getJSONArray("right_eyebrow"));
-      plotPoints( person[ i ].getJSONArray("nose_tip"));
-      plotPoints( person[ i ].getJSONArray("nose_bridge"));
+      JSONObject person = landmarks.getJSONObject(i);
+      plotPoints( person.getJSONArray("bottom_lip"));
+      plotPoints( person.getJSONArray("top_lip"));
+      plotPoints( person.getJSONArray("chin"));
+      plotPoints( person.getJSONArray("left_eye"));
+      plotPoints( person.getJSONArray("left_eyebrow"));
+      plotPoints( person.getJSONArray("right_eye"));
+      plotPoints( person.getJSONArray("right_eyebrow"));
+      plotPoints( person.getJSONArray("nose_tip"));
+      plotPoints( person.getJSONArray("nose_bridge"));
     }
   }
 }

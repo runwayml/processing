@@ -12,7 +12,8 @@ A collection of examples and tutorials on how to use [Runway](https://runwayapp.
   - [Tutorial](https://docs.runwayapp.ai/#/tutorial_posenet)
   - [Code](/posenet)
 - Face tracking with Face Landmarks:
-- [Code](/face_landmarks)
+  - [Tutorial](/face_landmarks/README.md)
+  - [Code](/face_landmarks)
 
 ## Library
 
