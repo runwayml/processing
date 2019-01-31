@@ -75,7 +75,7 @@ void setup() {
 
 The first part of the draw code clears the screen. If you change the ```false``` to ```true```, it will execute the simple ```background(255);``` every frame. Otherwise it will draw a rectangle with slight transparency, creating the effect of trails.
 
-```
+```java
 if (false) background(255); // change false to true if you don't want trails
 else {
   fill(255, 15);
