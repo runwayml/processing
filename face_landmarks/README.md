@@ -51,7 +51,7 @@ In Processing, go to File->Open, navigate to the Runway+Processing directory and
 
 The first two lines of the Processing code set up the http address of the data in a string, and the width and height of the webcam image in int variables.
 
-```
+```java
 final String httpDataRoute = "http://localhost:8001/data";
 int w, h;
 ```
