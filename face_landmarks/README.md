@@ -60,7 +60,7 @@ In line 1 of the Processing code, change the string to match the http route from
 
 The setup function creates a 600x400 pixel canvas and queries the http server for the width and height of the Runway camera data. It also sets some basic drawing parameters.
 
-```
+```java
 void setup() {
   size (600, 400);
   JSONObject json = loadJSONObject(httpDataRoute);
