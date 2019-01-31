@@ -136,7 +136,7 @@ JSONArray landmarks = data.getJSONArray("landmarks");
 
 Since the number of people in the frame may vary, we check to see how many people there are (ie how long the landmarks array is) and iterate over the landmarks array.
 
-```
+```java
 if (landmarks != null)
 {
   int num_people = landmarks.size();
