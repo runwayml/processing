@@ -23,7 +23,7 @@ In the Choose Input Source section, click on Input and choose Camera. This will 
 
 In the Choose Output section, click on Output and choose HTTP. This will tell Runway to direct the output to a local webpage which Processing will query to get the data.
 
-Take note of the address listed in the Routes box. You'll need this for Step xxx. It will probably be something like ```http://localhost:8001/data```.
+Take note of the address listed in the Routes box. You'll need this for Steps 6 and 8. It will probably be something like ```http://localhost:8001/data```.
 
 ## Step 4
 
@@ -84,7 +84,9 @@ else {
 }
 ```
 
-The Runway data is loaded into a series of JSONObjects and JSONArrays.
+#### JSON Objects and Arrays
+
+Runway's output data is encoded into a series of JSONObjects and JSONArrays.
 
 JSONObjects are enclosed in curly brackets and indexed with keys in quotes:
 
@@ -132,7 +134,7 @@ JSONObject data = json.getJSONObject("data");
 JSONArray landmarks = data.getJSONArray("landmarks");
 ```
 
-Since the number of people in the frame may vary, we check to see how many people there are (ie how long the landmarks array is) and extract the data into the
+Since the number of people in the frame may vary, we check to see how many people there are (ie how long the landmarks array is) and iterate over the landmarks array.
 
 ```
 if (landmarks != null)
@@ -143,7 +145,7 @@ if (landmarks != null)
     JSONObject person = landmarks.getJSONObject(i);
 ```
 
-Each facial feature consists of an array of [x,y] points. For this example, we'll draw them all the same way, so let's create a plotPoints() function to handle this.
+Let's skip to the end for a moment. Each facial feature consists of an array of [x,y] points. For this example, we'll draw them all the same way, so let's create a plotPoints() function to handle this.
 
 ```
 void plotPoints(JSONArray feature)
@@ -160,7 +162,7 @@ void plotPoints(JSONArray feature)
 }
 ```
 
-Now back in the draw function we can call the plotPoints() function on each feature:
+Now back in the draw() function we can call the plotPoints() function on each feature:
 
 ```
 plotPoints( person.getJSONArray("bottom_lip"));
