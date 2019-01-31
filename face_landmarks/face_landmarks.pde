@@ -1,3 +1,31 @@
+// Copyright (C) 2018 Runway AI Examples
+// 
+// This file is part of Runway AI Examples.
+// 
+// Runway-Examples is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// Runway-Examples is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with Runway AI Examples.  If not, see <http://www.gnu.org/licenses/>.
+// 
+// ===========================================================================
+
+// RUNWAY
+// www.runwayapp.ai
+
+// Face Landmarks Demo:
+// Receive HTTP Data from Runway
+// Running Face Landmarks model
+// Made by Joel Matthys @jwmatthys
+
+
 final String httpDataRoute = "http://localhost:8001/data"; // set to the Runway HTTP route
 int w, h;
 
