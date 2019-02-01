@@ -11,6 +11,9 @@ A collection of examples and tutorials on how to use [Runway](https://runwayapp.
 - Skeleton tracking with PoseNet:
   - [Tutorial](https://docs.runwayapp.ai/#/tutorial_posenet)
   - [Code](/posenet)
+- Face tracking with Face Landmarks:
+  - [Tutorial](/face_landmarks/README.md)
+  - [Code](/face_landmarks)
 
 ## Library
 
@@ -19,4 +22,3 @@ Ideally this will be a Processing Library that manages the OSC connection to Run
 ## Contributing
 
 This is still a work in progress. Contributions are welcomed!
-
