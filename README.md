@@ -14,6 +14,8 @@ A collection of examples and tutorials on how to use [Runway](https://runwayapp.
 - Face tracking with Face Landmarks:
   - [Tutorial](/face_landmarks/README.md)
   - [Code](/face_landmarks)
+- Image Captioning with im2txt:
+  - [Code](/im2txt)
 
 ## Library
 
