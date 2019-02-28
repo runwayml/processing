@@ -26,14 +26,14 @@
 // Made by Joel Matthys @jwmatthys
 
 
-final String httpDataRoute = "http://localhost:8001/data"; // set to the Runway HTTP route
+final String httpDataRoute = "http://localhost:8004/data"; // set to the Runway HTTP route
 int w, h;
 
 void setup() {
   size (600, 400);
   JSONObject json = loadJSONObject(httpDataRoute);
-  JSONObject data = json.getJSONObject("data");
-  JSONObject size = data.getJSONObject("size");
+  JSONObject size = json.getJSONObject("size");
+  println(size);
   w = size.getInt("width");
   h = size.getInt("height");
   noFill();
@@ -49,8 +49,7 @@ void draw ()
     noFill();
   }
   JSONObject json = loadJSONObject(httpDataRoute);
-  JSONObject data = json.getJSONObject("data");
-  JSONArray landmarks = data.getJSONArray("landmarks");
+  JSONArray landmarks = json.getJSONArray("landmarks");
   if (landmarks != null)
   {
     int num_people = landmarks.size();
