@@ -16,6 +16,8 @@ A collection of examples and tutorials on how to use [Runway](https://runwayapp.
   - [Code](/face_landmarks)
 - Image Captioning with im2txt:
   - [Code](/im2txt)
+- COCO-SSD:
+  - [StreetView](COCO-SSD/StreetView)
 
 ## Library
 
