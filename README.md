@@ -18,6 +18,8 @@ A collection of examples and tutorials on how to use [Runway](https://runwayapp.
   - [Code](/im2txt)
 - COCO-SSD:
   - [StreetView](COCO-SSD/StreetView)
+- AttnGAN:
+  - [attnGAN](/attnGAN)
 
 ## Library
 
