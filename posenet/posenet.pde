@@ -134,6 +134,7 @@ void keyPressed() {
 
 // OSC Event: listens to data coming from Runway
 void oscEvent(OscMessage theOscMessage) {
+  if (!theOscMessage.addrPattern().equals("/data")) return;
   // The data is in a JSON string, so first we get the string value
   String dataString = theOscMessage.get(0).stringValue();
 
