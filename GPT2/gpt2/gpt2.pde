@@ -1,4 +1,4 @@
-// Copyright (C) 2018 Runway ML Examples
+// Copyright (C) 2019 Runway ML Examples
 // 
 // This file is part of Runway ML Examples.
 // 
@@ -13,11 +13,12 @@
 // GNU General Public License for more details.
 // 
 // You should have received a copy of the GNU General Public License
-// along with Runway AI Examples.  If not, see <http://www.gnu.org/licenses/>.
+// along with Runway.  If not, see <http://www.gnu.org/licenses/>.
 // 
 // ===========================================================================
-// RUNWAY
-// www.ruwnayml.com
+
+// RUNWAYML
+// www.runwayml.com
 
 // import controlp5
 import controlP5.*;

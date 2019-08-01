@@ -1,6 +1,6 @@
-// Copyright (C) 2018 Runway AI Examples
+// Copyright (C) 2019 Runway ML Examples
 // 
-// This file is part of Runway AI Examples.
+// This file is part of Runway ML Examples.
 // 
 // Runway-Examples is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,8 +17,8 @@
 // 
 // ===========================================================================
 
-// RUNWAY
-// www.runwayapp.ai
+// RUNWAYML
+// www.runwayml.com
 
 // AttnGAN Demo
 // Send OSC text messages to Runway and generate images

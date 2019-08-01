@@ -1,6 +1,6 @@
-// Copyright (C) 2018 Runway AI Examples
+// Copyright (C) 2019 RunwayML Examples
 // 
-// This file is part of Runway AI Examples.
+// This file is part of RunwayML Examples.
 // 
 // Runway-Examples is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,8 +17,8 @@
 // 
 // ===========================================================================
 
-// RUNWAY
-// www.runwayapp.ai
+// RUNWAYML
+// www.runwayml.com
 
 // im2txt Demo:
 // Receive OSC messages from Runway
@@ -37,9 +37,8 @@ int runwayPort = 57100;
 OscP5 oscP5;
 NetAddress myBroadcastLocation;
 
-// This array will hold all the captions
+// The data coming in from Runway as an Object
 JSONObject data;
-JSONArray results;
 
 void setup() {
   size(500, 300);
@@ -73,14 +72,8 @@ void draw() {
 void drawCaptions() {
   // Only if there are any captions 
   if (data != null) {
-    results = data.getJSONArray("results");
-    for(int i = 0; i < results.size(); i++) {
-      JSONObject result = results.getJSONObject(i);
-      String caption = result.getString("caption");
-      float prob = result.getFloat("probability");
-      String dispString = str(i+1)+") "+caption;
-      text(dispString, 5, 20 + 20*i);
-    }
+    String results = data.getString("caption");
+    text(results, 100, 100);
   }
 }
 
@@ -110,6 +103,7 @@ void keyPressed() {
 
 // OSC Event: listens to data coming from Runway
 void oscEvent(OscMessage theOscMessage) {
+  if (!theOscMessage.addrPattern().equals("/data")) return;
   // The data is in a JSON string, so first we get the string value
   String dataString = theOscMessage.get(0).stringValue();
 
