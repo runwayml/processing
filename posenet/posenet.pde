@@ -34,6 +34,9 @@ String runwayHost = "127.0.0.1";
 // Runway Port
 int runwayPort = 57100;
 
+int width = 400;
+int height = 350;
+
 OscP5 oscP5;
 NetAddress myBroadcastLocation;
 
@@ -93,16 +96,14 @@ void drawParts() {
   if (data != null) {
     humans = data.getJSONArray("poses");
     for(int h = 0; h < humans.size(); h++) {
-      JSONObject human = humans.getJSONObject(h);
-      JSONArray keypoints = human.getJSONArray("keypoints");
+      JSONArray keypoints = humans.getJSONArray(h);
       // Now that we have one human, let's draw its body parts
       for (int k = 0; k < keypoints.size(); k++) {
-        JSONObject body_part = keypoints.getJSONObject(k);
-        JSONObject positions = body_part.getJSONObject("position");
         // Body parts are relative to width and weight of the input
-        float x = positions.getFloat("x");
-        float y = positions.getFloat("y");
-        ellipse(x, y, 10, 10);
+        JSONArray point = keypoints.getJSONArray(k);
+        float x = point.getFloat(0);
+        float y = point.getFloat(1);
+        ellipse(x * width, y * height, 10, 10);
       }
     }
   }
