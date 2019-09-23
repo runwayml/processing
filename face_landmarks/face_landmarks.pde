@@ -26,16 +26,10 @@
 // Made by Joel Matthys @jwmatthys
 
 
-final String httpDataRoute = "http://localhost:8004/data"; // set to the Runway HTTP route
-int w, h;
+final String httpDataRoute = "http://localhost:8000/data"; // set to the Runway HTTP route
 
 void setup() {
   size (600, 400);
-  JSONObject json = loadJSONObject(httpDataRoute);
-  JSONObject size = json.getJSONObject("size");
-  println(size);
-  w = size.getInt("width");
-  h = size.getInt("height");
   noFill();
   stroke(0);
 }
@@ -49,35 +43,15 @@ void draw ()
     noFill();
   }
   JSONObject json = loadJSONObject(httpDataRoute);
-  JSONArray landmarks = json.getJSONArray("landmarks");
+  JSONArray landmarks = json.getJSONArray("points");
   if (landmarks != null)
   {
-    int num_people = landmarks.size();
-    for (int i = 0; i < num_people; i++)
-    {
-      JSONObject person = landmarks.getJSONObject(i);
-      plotPoints( person.getJSONArray("bottom_lip"));
-      plotPoints( person.getJSONArray("top_lip"));
-      plotPoints( person.getJSONArray("chin"));
-      plotPoints( person.getJSONArray("left_eye"));
-      plotPoints( person.getJSONArray("left_eyebrow"));
-      plotPoints( person.getJSONArray("right_eye"));
-      plotPoints( person.getJSONArray("right_eyebrow"));
-      plotPoints( person.getJSONArray("nose_tip"));
-      plotPoints( person.getJSONArray("nose_bridge"));
+    for (int k = 0; k < landmarks.size(); k++) {
+      // Body parts are relative to width and weight of the input
+      JSONArray point = landmarks.getJSONArray(k);
+      float x = point.getFloat(0);
+      float y = point.getFloat(1);
+      ellipse(x * width, y * height, 10, 10);
     }
   }
-}
-
-void plotPoints(JSONArray feature)
-{
-  beginShape();
-  for (int i = 0; i < feature.size(); i++)
-  {
-    JSONArray p = feature.getJSONArray(i);
-    float x = map(p.getInt(0), 0, w, width, 0);
-    float y = map(p.getInt(1), 0, h, 0, height);
-    vertex (x, y);
-  }
-  endShape();
 }
